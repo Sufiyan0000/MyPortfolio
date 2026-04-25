@@ -1,5 +1,4 @@
 import { useState, useRef } from 'react';
-import resume from '../../assets/MdSufiyanResume.pdf'
 /**
  * ResumeTerminal — Next.js CLI-inspired download widget.
  * Drop this anywhere in your layout (Hero, About, etc.)
@@ -67,8 +66,9 @@ export default function ResumeTerminal() {
 
         {/* Download button */}
         <a
-          href={resume}
-          download
+          href={'resume.pdf'}
+          download = "Md_Sufiyan_Ali_Resume.pdf"
+          target='_blank'
           className="flex items-center gap-1.5 px-4 py-2.5
             bg-neutral-900 dark:bg-neutral-100
             text-white dark:text-neutral-900
