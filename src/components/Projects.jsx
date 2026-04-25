@@ -1,92 +1,59 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import ProjectCard from './ui/ProjectCard';
+import { SourceCodeButton } from './ui/SourceCodeButton';
+import { SeeAllProjects } from './ui/SeeAllProjects';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const PROJECTS = [
   {
-    icon: '🛒', iconBg: 'bg-blue-50 dark:bg-blue-950/40',
-    tag: 'E-Commerce', title: 'ShopFlow',
-    desc: 'Multi-vendor marketplace with real-time inventory and Stripe payments.',
-    tech: ['Next.js', 'Prisma', 'Stripe'],
-    accent: 'from-blue-200 to-emerald-200',
+    icon: '👟',
+    iconBg: 'bg-blue-50 dark:bg-blue-950/40',
+    tag: 'E-Commerce',
+    title: 'Nike Clone',
+    desc: 'Modern e-commerce platform with product browsing, cart, and responsive UI inspired by Nike.',
+    tech: ['Next.js', 'Tailwind CSS', 'Zustand', 'Django', 'DRF', 'SQLite'],
+    accent: 'from-blue-200 to-cyan-100',
+    github: 'https://github.com/Sufiyan0000/nike-ecommerce',
+    live: null
   },
   {
-    icon: '📊', iconBg: 'bg-amber-50 dark:bg-amber-950/40',
-    tag: 'SaaS Dashboard', title: 'Analytics Pro',
-    desc: 'Real-time analytics dashboard with complex data visualizations.',
-    tech: ['React', 'D3.js', 'Node'],
-    accent: 'from-amber-200 to-orange-100',
+    icon: '🎟️',
+    iconBg: 'bg-red-50 dark:bg-red-950/40',
+    tag: 'Booking Platform',
+    title: 'BookMyShow Clone',
+    desc: 'Full-stack ticket booking system for movies, events, and sports with dynamic seat selection.',
+    tech: ['Next.js','Tailwindcss','Django', 'DRF', 'SQLite'],
+    accent: 'from-red-200 to-pink-100',
+    github: 'https://github.com/Sufiyan0000/BookMyShow',
+    live: null
   },
   {
-    icon: '💬', iconBg: 'bg-purple-50 dark:bg-purple-950/40',
-    tag: 'Social App', title: 'ConnectHub',
-    desc: 'Real-time chat platform supporting thousands of concurrent users.',
-    tech: ['Socket.io', 'Redis', 'MongoDB'],
+    icon: '💬',
+    iconBg: 'bg-purple-50 dark:bg-purple-950/40',
+    tag: 'Social App',
+    title: 'DropPost',
+    desc: 'Social media app with real-time chat, posts, and user interactions.',
+    tech: ['Django', 'DRF', 'SQLite'],
     accent: 'from-purple-200 to-pink-100',
+    github: 'https://github.com/Sufiyan0000/DropPost/tree/main/TwitterProject',
+    live: null
   },
   {
-    icon: '🤖', iconBg: 'bg-emerald-50 dark:bg-emerald-950/40',
-    tag: 'AI Tool', title: 'DocuMind',
-    desc: 'AI-powered document analyzer that extracts key insights automatically.',
-    tech: ['Python', 'FastAPI', 'OpenAI'],
-    accent: 'from-emerald-200 to-teal-100',
+    icon: '🐙',
+    iconBg: 'bg-gray-100 dark:bg-gray-900/40',
+    tag: 'Developer Tool',
+    title: 'GitHub User Finder',
+    desc: 'Search and explore GitHub profiles using GitHub API with user stats and repos.',
+    tech: ['React', 'GitHub API', 'TailwindCSS'],
+    accent: 'from-gray-300 to-slate-200',
+    github: 'https://github.com/Sufiyan0000/React-Projects/tree/main/github-user-finder',
+    live: null
   },
 ];
 
-function ProjectCard({ project }) {
-  return (
-    <div
-      className="group relative bg-white dark:bg-neutral-900
-                 border border-neutral-100 dark:border-neutral-800
-                 rounded-[22px] p-7 overflow-hidden cursor-pointer
-                 transition-all duration-300
-                 hover:-translate-y-1.5 hover:shadow-[0_8px_40px_rgba(0,0,0,0.10)]
-                 will-change-transform"
-    >
-      {/* Accent top bar — wipes in on hover */}
-      <div
-        className={`absolute top-0 left-0 right-0 h-[3px]
-                    bg-gradient-to-r ${project.accent}
-                    scale-x-0 group-hover:scale-x-100
-                    origin-left transition-transform duration-300`}
-      />
-
-      <div className={`w-11 h-11 rounded-xl ${project.iconBg} flex items-center justify-center text-xl mb-5`}>
-        {project.icon}
-      </div>
-
-      <span
-        className="inline-block text-[11px] px-2.5 py-0.5 rounded-full mb-3
-                   border border-neutral-200 dark:border-neutral-700
-                   text-neutral-400 dark:text-neutral-500"
-      >
-        {project.tag}
-      </span>
-
-      <h3 className="text-[1rem] font-medium mb-2 text-neutral-900 dark:text-neutral-100">
-        {project.title}
-      </h3>
-      <p className="text-[13px] text-neutral-500 dark:text-neutral-400 leading-relaxed">
-        {project.desc}
-      </p>
-
-      <div className="flex gap-1.5 mt-5 flex-wrap">
-        {project.tech.map((t) => (
-          <span
-            key={t}
-            className="text-[11px] px-2.5 py-0.5 rounded-full
-                       bg-neutral-50 dark:bg-neutral-800
-                       text-neutral-400 dark:text-neutral-500"
-          >
-            {t}
-          </span>
-        ))}
-      </div>
-    </div>
-  );
-}
 
 export default function Projects() {
   const sectionRef = useRef(null);
@@ -136,6 +103,9 @@ export default function Projects() {
             <ProjectCard project={p} />
           </div>
         ))}
+      </div>
+      <div className='w-full flex items-center justify-center mt-15'>
+        <SeeAllProjects text={'See All Projects'} href={'https://github.com/Sufiyan0000?tab=repositories'} />
       </div>
     </section>
   );

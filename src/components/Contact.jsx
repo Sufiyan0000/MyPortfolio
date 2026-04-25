@@ -47,7 +47,9 @@ export default function Contact() {
         </p>
 
         <a
-          href="mailto:sufiyan@email.com"
+          href="https://mail.google.com/mail/?view=cm&to=alimdsufiyan89@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
           className="relative inline-block px-9 py-3.5 rounded-full text-sm font-medium
                      bg-white dark:bg-neutral-900
                      text-neutral-900 dark:text-white

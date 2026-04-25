@@ -27,7 +27,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-[#f9f9f7] dark:bg-[#0e0e0d] 
-                    text-neutral-900 dark:text-neutral-100 
+                    text-neutral-950 dark:text-neutral-100 
                     transition-colors duration-300 font-sans">
 
       <Navbar dark={dark} onToggle={() => setDark(prev => !prev)} />

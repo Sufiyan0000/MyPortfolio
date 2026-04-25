@@ -5,19 +5,19 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const DETAILS = [
-  { icon: '📍', bg: 'bg-blue-50 dark:bg-blue-950/40',  label: 'Location',  value: 'Bihar, India' },
-  { icon: '🎓', bg: 'bg-purple-50 dark:bg-purple-950/40', label: 'Education', value: 'B.Tech Computer Science' },
-  { icon: '💼', bg: 'bg-emerald-50 dark:bg-emerald-950/40', label: 'Experience', value: '3+ Years Professional' },
+  { icon: '📍', bg: 'bg-blue-50 dark:bg-blue-950/40',  label: 'Location',  value: 'Ranchi, Jharkhand, India' },
+  { icon: '🎓', bg: 'bg-purple-50 dark:bg-purple-950/40', label: 'Education', value: 'BCA (Bachelor of Computer Application)' },
+  { icon: '💼', bg: 'bg-emerald-50 dark:bg-emerald-950/40', label: 'Experience', value: 'Fresher' },
   { icon: '✅', bg: 'bg-amber-50 dark:bg-amber-950/40', label: 'Status',    value: 'Available for hire', valueClass: 'text-emerald-600 dark:text-emerald-400' },
 ];
 
 const STATS = [
-  { num: '3+', label: 'Years exp.' },
-  { num: '20+', label: 'Projects' },
-  { num: '12+', label: 'Clients' },
+  { num: '10+', label: 'Projects built' },
+  { num: '6+', label: 'Technologies' },
+  { num: '0→∞', label: 'Exprience goal' },
 ];
 
-const TECH = ['React', 'Node.js', 'TypeScript', 'Python', 'AWS', 'PostgreSQL'];
+const TECH = ['React', 'Next.js', 'TailwindCSS', 'Zustand', 'Axios','TypeScript', 'Python', 'Django', 'DRF','MySql', 'Docker'];
 
 export default function About() {
   const sectionRef  = useRef(null);
@@ -158,7 +158,7 @@ export default function About() {
                        shadow-[0_8px_24px_rgba(0,0,0,0.10)]"
           >
             <span className="text-[16px]">⚡</span>
-            20+ Projects
+            10+ Projects
           </div>
 
           {/* Floating badge 2 */}
@@ -193,6 +193,10 @@ export default function About() {
                         font-light text-[0.98rem]">
             From pixel-perfect UIs to scalable backend architectures — I thrive across the
             entire stack, bringing both technical precision and creative vision to every build.
+          </p>
+          <br />
+          <p className="text-neutral-500 dark:text-neutral-400 leading-[1.85] font-light text-[0.97rem]">
+            I'm at the beginning of my professional journey, and that excites me. I bring fresh energy, a hunger to learn fast, and the proven ability to build production-quality applications independently.
           </p>
 
           {/* Stats */}

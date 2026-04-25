@@ -1,9 +1,11 @@
 /* Social icon SVGs inline — no external icon lib required */
+import logo from '../assets/msa1.png'
+
 
 const SOCIAL_LINKS = [
     {
       name: 'GitHub',
-      href: 'https://github.com',
+      href: 'https://github.com/Sufiyan0000',
       svg: (
         <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current">
           <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483
@@ -19,7 +21,7 @@ const SOCIAL_LINKS = [
     },
     {
       name: 'LinkedIn',
-      href: 'https://linkedin.com',
+      href: 'https://www.linkedin.com/in/muhammad-sufiyan-ali-5559aa295/',
       svg: (
         <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current">
           <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
@@ -69,7 +71,7 @@ const SOCIAL_LINKS = [
   
             {/* Brand */}
             <div className="max-w-[260px]">
-              <span className="font-playfair text-[22px] font-bold block mb-3">MSA.</span>
+              <a href=''><img src={logo} alt='logo' className='h-8 w-auto dark:invert mb-3'/></a>
               <p className="text-[13px] text-neutral-500 dark:text-neutral-400 leading-relaxed">
                 Full Stack Developer building modern and scalable web applications with care.
               </p>
@@ -99,7 +101,7 @@ const SOCIAL_LINKS = [
             {/* Navigation + Contact columns */}
             <div className="flex gap-12 sm:gap-16 flex-wrap">
               <div>
-                <h4 className="text-[12px] uppercase tracking-[0.1em] text-neutral-400 mb-4">
+                <h4 className="text-[12px] uppercase tracking-[0.1em]  text-neutral-600 dark:text-neutral-300 font-semibold mb-4">
                   Navigation
                 </h4>
                 <ul className="flex flex-col gap-2.5 list-none">
@@ -119,23 +121,27 @@ const SOCIAL_LINKS = [
               </div>
   
               <div>
-                <h4 className="text-[12px] uppercase tracking-[0.1em] text-neutral-400 mb-4">
+                <h4 className="text-[12px] uppercase tracking-[0.1em] text-neutral-600 dark:text-neutral-300 font-semibold mb-4">
                   Contact
                 </h4>
                 <ul className="flex flex-col gap-2.5 list-none">
                   <li>
                     <a
-                      href="mailto:sufiyan@email.com"
+                      href="https://mail.google.com/mail/?view=cm&to=alimdsufiyan89@gmail.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-[13px] text-neutral-500 dark:text-neutral-400
                                  hover:text-neutral-900 dark:hover:text-neutral-100
                                  transition-colors duration-200 no-underline"
                     >
-                      sufiyan@email.com
+                      alimdsufiyan89@gmail.com
                     </a>
+               
                   </li>
                   <li>
                     <a
-                      href="https://github.com"
+                      href="https://github.com/sufiyan0000" target="_blank" rel="noopener noreferrer"
+                 
                       className="text-[13px] text-neutral-500 dark:text-neutral-400
                                  hover:text-neutral-900 dark:hover:text-neutral-100
                                  transition-colors duration-200 no-underline"
@@ -145,9 +151,9 @@ const SOCIAL_LINKS = [
                   </li>
                   <li>
                     <a
-                      href="https://linkedin.com"
+                      href="https://www.linkedin.com/in/muhammad-sufiyan-ali-5559aa295/" target="_blank" rel="noopener noreferrer"
                       className="text-[13px] text-neutral-500 dark:text-neutral-400
-                                 hover:text-neutral-900 dark:hover:text-neutral-100
+                                 hover:text-neutral-600 dark:hover:text-neutral-100
                                  transition-colors duration-200 no-underline"
                     >
                       LinkedIn
@@ -161,22 +167,39 @@ const SOCIAL_LINKS = [
           {/* Divider */}
           <div className="border-t border-neutral-100 dark:border-neutral-800 pt-6
                           flex flex-col sm:flex-row justify-between items-center gap-3">
-            <p className="text-[12px] text-neutral-400 dark:text-neutral-500">
+            <p className="text-[12px] text-neutral-800 dark:text-neutral-400">
               © 2026 Md Sufiyan Ali. Built with care &amp; coffee ☕
             </p>
             <div className="flex gap-5">
-              {['Privacy', 'Terms', 'Hire me'].map((link) => (
-                <a
-                  key={link}
-                  href="#"
-                  className="text-[12px] text-neutral-400 dark:text-neutral-500
-                             hover:text-neutral-700 dark:hover:text-neutral-300
-                             transition-colors duration-200 no-underline"
-                >
-                  {link}
-                </a>
-              ))}
+              <a
+                href="#"
+                className="text-[12px] text-neutral-400 dark:text-neutral-500
+                           hover:text-neutral-700 dark:hover:text-neutral-300
+                           transition-colors duration-200 no-underline"
+              >
+                Privacy
+              </a>
+              <a
+                href="#"
+                className="text-[12px] text-neutral-400 dark:text-neutral-500
+                           hover:text-neutral-700 dark:hover:text-neutral-300
+                           transition-colors duration-200 no-underline"
+              >
+                Terms
+              </a>
+              <a
+                href="https://mail.google.com/mail/?view=cm&to=alimdsufiyan89@gmail.com&body=You%27re%20Hired"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[12px] text-neutral-400 dark:text-neutral-500
+                           hover:text-neutral-700 dark:hover:text-neutral-300
+                           transition-colors duration-200 no-underline"
+              >
+                Hire me
+              </a>
+         
             </div>
+       
           </div>
   
         </div>

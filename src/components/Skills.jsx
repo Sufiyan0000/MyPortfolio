@@ -7,15 +7,15 @@ gsap.registerPlugin(ScrollTrigger);
 const GROUPS = [
   {
     label: 'Frontend',
-    chips: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
+    chips: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'GSAP'],
   },
   {
     label: 'Backend',
-    chips: ['Node.js', 'Express', 'Python', 'FastAPI', 'GraphQL'],
+    chips: ['Python', 'Django', 'DRF'],
   },
   {
-    label: 'Database & Cloud',
-    chips: ['PostgreSQL', 'MongoDB', 'Redis', 'AWS', 'Docker'],
+    label: 'Database ',
+    chips: ['SQL', 'MySql', 'SQLite', 'Docker'],
   },
 ];
 
@@ -64,7 +64,7 @@ export default function Skills() {
     <section
       id="skills"
       ref={sectionRef}
-      className="py-24 sm:py-28 px-6 sm:px-10 lg:px-16 max-w-[1200px] mx-auto"
+      className="sm:py-10 md:py-15 px-6 sm:px-10 lg:px-16 max-w-[1200px] mx-auto"
     >
       <span className="skills-label block text-[11px] uppercase tracking-[0.12em] text-neutral-400 mb-3 opacity-0">
         Expertise
