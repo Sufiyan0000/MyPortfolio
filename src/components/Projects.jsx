@@ -104,7 +104,7 @@ export default function Projects() {
           </div>
         ))}
       </div>
-      <div className='w-full flex items-center justify-center mt-15'>
+      <div className='w-full flex items-center justify-center mt-20'>
         <SeeAllProjects text={'See All Projects'} href={'https://github.com/Sufiyan0000?tab=repositories'} />
       </div>
     </section>
